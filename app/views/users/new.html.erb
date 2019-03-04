@@ -1,0 +1,16 @@
+Create user <br>
+
+<%= form_for @user do |f| %>
+  <%= f.label :first_name %><br>
+  <%= f.text_field :first_name %><br>
+  <%= f.label :last_name %><br>
+  <%= f.text_field :last_name%><br><br>
+
+  <label>Choose Your News Agency</label><br>
+  <input type="checkbox" name="article[]" value="Guardian">Guardian<br><br>
+  
+  <label>Choose Your Topics</label><br>
+  <input type="checkbox" name="topic[]" value="Politics">Politics<br>
+  <input type="checkbox" name="topic[]" value="Technology">Technology<br><br>
+  <%= f.submit%>
+<% end %>
